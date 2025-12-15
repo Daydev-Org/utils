@@ -188,7 +188,7 @@ func LogError(l *zap.Logger, err error, msg string, fields ...zap.Field) {
 func Must(logger *zap.Logger, err error) *zap.Logger {
 	if err != nil {
 		// Use a temporary fallback to stderr if we don't have a valid logger yet.
-		// Error and bytes written are skipped since we're already panicking.'
+		// Error and bytes written are skipped since we're already panicking.]1234'
 		_, _ = fmt.Fprintf(os.Stderr, "logx1: fatal init error: %v\n", err)
 		panic(err)
 	}
