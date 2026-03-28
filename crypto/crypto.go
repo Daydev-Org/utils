@@ -23,3 +23,8 @@ func HashToken(token string) string {
 	h := sha256.Sum256([]byte(token))
 	return hex.EncodeToString(h[:])
 }
+
+func HashURL(url string) string {
+	h := sha256.Sum256([]byte(url))
+	return base64.RawURLEncoding.EncodeToString(h[:])
+}
